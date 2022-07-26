@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .simple-linear {
+        background: linear-gradient(blue, pink);
+        }
+        .horizontal-gradient {
+  background: linear-gradient(to right, blue, pink);
+}
+.auto-spaced-linear-gradient {
+  background: linear-gradient(red, yellow, blue, orange);
+}
+.simple-radial {
+  background: radial-gradient(red, blue);
+}
+.repeating-radial {
+  background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
+}
+.conic-gradient {
+  background: conic-gradient(from 45deg, red, orange 50%, yellow 85%, green);
+}
+#example1 {
+  background-image: url(1.jpg), url(2.jpg);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+    </style>
+
+</head>
+<body>
+    <div class="simple-linear"></div>
+    <div class="horizontal-gradient"></div>
+    <div class="auto-spaced-linear-gradient "></div>
+    <div class="simple-radial" ></div>
+    <div class="repeating-radial " ></div>
+    <div class="conic-gradient" ></div>
+    <div id="example1 "></div>
+
+</body>
+</html>

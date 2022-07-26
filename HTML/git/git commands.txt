@@ -1,0 +1,294 @@
+
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git commit -m "first commit"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'LENOVO@DESKTOP-B8O1SPE.(none)')
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ^C
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git config --global user.email "n180078@rguktn.ac.in"
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git config --global user.name "Uma Maheswari"
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+core.editor="C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin\code" --wait
+user.emai=n180078@tguktn.ac.in
+user.name=Uma Maheswari
+user.email=n180078@rguktn.ac.in
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.origin.url=https://github.com/UmaMaheswari4816/CALCULATOR-.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+(END)
+
+
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git commit -m "first commit"
+[master 65ace7d] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu1.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   edu1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        edu2.txt
+        edu3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git add -A
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   edu1.txt
+        new file:   edu2.txt
+        new file:   edu3.txt
+
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git commit -a -m "commiting 3 fies together"
+[master 08e15c2] commiting 3 fies together
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 edu2.txt
+ create mode 100644 edu3.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git log
+commit 08e15c20235aea596e306f3825f5b3b6a7e9d9cf (HEAD -> master)
+Author: Uma Maheswari <n180078@rguktn.ac.in>
+Date:   Tue Jul 19 13:48:52 2022 +0530
+
+    commiting 3 fies together
+
+commit 65ace7d0ed36386ed11ee499c69f1942e7a96091
+Author: Uma Maheswari <n180078@rguktn.ac.in>
+Date:   Tue Jul 19 13:44:18 2022 +0530
+
+    first commit
+
+commit 8aebc997cd5a5b31e454bf0efeb3d115ecd677db (origin/main)
+Author: UmaMaheswari4816 <104963668+UmaMaheswari4816@users.noreply.github.com>
+Date:   Fri Jul 15 03:03:57 2022 -0700
+
+    Add files via upload
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git branch firstbranch
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git add edu4.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git commit -m "making changes in the firstbranch"
+[firstbranch 38aeab8] making changes in the firstbranch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ ls
+'Screenshot (1).png'   edu2.txt   edu4.txt
+ edu1.txt              edu3.txt   simpleCalc.html
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ls
+'Screenshot (1).png'   edu1.txt   edu2.txt   edu3.txt   simpleCalc.html
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git merge firstbranch
+Updating 08e15c2..38aeab8
+Fast-forward
+ edu4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edu4.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ls
+'Screenshot (1).png'   edu2.txt   edu4.txt
+ edu1.txt              edu3.txt   simpleCalc.html
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git commit -a -m "modifying ed4"
+[firstbranch 4ea72ad] modifying ed4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ cat edu4.txt
+firstbranch first fie, modified in firstbarnch
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ cat edu4.txt
+firstbranch
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git add -A
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git commit -a -m "adding for rebasing"
+[firstbranch af223c1] adding for rebasing
+ 2 files changed, 2 insertions(+)
+ create mode 100644 edu5.txt
+ create mode 100644 edu6.txt
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ ls
+'Screenshot (1).png'   edu2.txt   edu4.txt   edu6.txt
+ edu1.txt              edu3.txt   edu5.txt   simpleCalc.html
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ls
+'Screenshot (1).png'   edu2.txt   edu4.txt
+ edu1.txt              edu3.txt   simpleCalc.html
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git rebase master
+Current branch firstbranch is up to date.
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git checkout master
+Switched to branch 'master'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git rebase firstbranch
+Successfully rebased and updated refs/heads/master.
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ls
+'Screenshot (1).png'   edu2.txt   edu4.txt   edu6.txt
+ edu1.txt              edu3.txt   edu5.txt   simpleCalc.html
+
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/LENOVO/.ssh/id_rsa):
+Created directory '/c/Users/LENOVO/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/LENOVO/.ssh/id_rsa
+Your public key has been saved in /c/Users/LENOVO/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:h+Y0M1eB9pQMfpnHm+SFrzsA3RHLu3VZnkXX1qVJUl4 LENOVO@DESKTOP-B8O1SPE
+The key's randomart image is:
++---[RSA 3072]----+
+|          .+oo+.E|
+|         .o +X.B=|
+|         ..+=.@o+|
+|         ..oo+.B=|
+|        S o.  =o=|
+|       + *  .  +.|
+|        .    .o  |
+|              .. |
+|              .. |
++----[SHA256]-----+
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ cat /c/Users/LENOVO/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCzPpPJoi6TNYJ3mgNJfoo4cJUWV7VZ0gqb5XiggRmJxNgCBjRP7W2+dsKIpAXCkKJSTRKn/4wIQVV4H5B7G0JmAAvNfXxHq2HR49lA3Kr6d5cochceO0sdhQcDg8HB4wC5agNxGjEA3zOzeGPx+Ru422F5iVt6FFTzWQrnYwXyj4HlPp9GfwhQsl2Pe3+oO5F1xFC2ZM4BxPjXumr+fV3L1JzB6RG0MT9dfIftt7vsTtMmItUXlLphzFZh6g2e7eCGz2Mvv+zZkTH9Ega2PFfZ6CCQARGGyQxqEOZiJ9JHC4uxU2eEDwo2+xhAcAsJS3x0IWxL+4og1LOE8IAJoDlCq38Ge4RCVt+JPrQPvksgv+WZT+VxcsTnxx6dsQs3sS/xrLCuCw2NVF9e57hQNqYSM1xrAi0mLgzGqfajKTe807UAWvQLGMRXEyK4isOZgX6e0CfFJbGAqu/me7zEA6fB2fLfk7aPgaciyqijuVqA158zW2RO0H/yBWi7eEnDtk0= LENOVO@DESKTOP-B8O1SPE
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ^C
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ ssh -T git@github.com
+The authenticity of host 'github.com (13.234.210.38)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Hi UmaMaheswari4816! You've successfully authenticated, but GitHub does not provide shell access.
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (master)
+$ git checkout firstbranch
+Switched to branch 'firstbranch'
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ git push origin firstbranch
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (18/18), 1.49 KiB | 381.00 KiB/s, done.
+Total 18 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'firstbranch' on GitHub by visiting:
+remote:      https://github.com/UmaMaheswari4816/CALCULATOR-/pull/new/firstbranch
+remote:
+To https://github.com/UmaMaheswari4816/CALCULATOR-.git
+ * [new branch]      firstbranch -> firstbranch
+
+LENOVO@DESKTOP-B8O1SPE MINGW64 /c/Git&GitHub (firstbranch)
+$ 5
+

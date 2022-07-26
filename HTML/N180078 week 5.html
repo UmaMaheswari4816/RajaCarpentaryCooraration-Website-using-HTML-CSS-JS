@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--embeded-->
+    <style media = "all">
+        p{
+           background-color: orange;
+        }
+        h2{
+           color:blue;
+           margin-left: 30px;
+        }
+        p + center{
+            font-weight: 900;
+        }
+        p::first-line {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+        p:lang(link) {
+  background: yellow;
+}
+    </style>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <h2 style="color:yellow;font:italic">A Blue Heading</h2>
+    <p>link external</p>
+    <center>The adjacent sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element.</center>
+</body>
+</html>

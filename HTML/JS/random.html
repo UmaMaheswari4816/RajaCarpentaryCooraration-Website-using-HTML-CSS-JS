@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body bgcolor="yellow">
+	
+	<center style="background-color:chartreuse; font-style:oblique;">CHECK HOW MUCH LUCKY YOU ARE</center>
+	<p>Enter any number between (11-100):</p>
+	<input type="text"  id="guessvalue"><br><br>
+	<input type="submit" id="submit">
+	<script>
+		var n=Math.floor(Math.random()*100)+11;
+		
+		var c=0;
+		document.getElementById("submit").onclick=function()
+		{
+		var g=document.getElementById("guessvalue").value;
+		
+		if(n==g)
+		{	c++;
+			alert("Congratulations you Guessed the number in "+c+" chances")
+		}
+		else if(g<n){
+			c++;
+			alert("Sorry Enterd number is too small..do you want to try again..?")
+		}
+		else{
+			c++;
+			alert("Sorry Enterd number is too Big..do you want to try again..?");
+		}
+		}
+
+	</script>
+</body>
+
+</html>
